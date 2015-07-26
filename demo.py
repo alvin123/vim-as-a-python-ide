@@ -9,7 +9,6 @@ def main(*args, **kwargs):
     print 'Hello world'
     set_breakpoint(42, 42, data={'key': 'value', })
 
-
 def fold_this():
     """We can fold and unfold code blocks by pressing ``f``."""
     print 'Fold it.'
@@ -29,7 +28,7 @@ def life_syntax_checking():
     """Pylint checks our code on each save."""
     # Try to uncomment this and save.
     # Try to uncomment the os import and save.
-    # abc = 5  # Try to uncomment this line and save.
+#    abc = 5  # Try to uncomment this line and save.
 
     # Now fix all reported issues!
     # You can move down into the Quickfix window witch ``<C-j>``

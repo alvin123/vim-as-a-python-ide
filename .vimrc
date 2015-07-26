@@ -99,6 +99,7 @@ set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
 " easier formatting of paragraphs
 vmap Q gq
@@ -181,6 +182,30 @@ let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+
+" Settings for javascript
+" cd ~/.vim/bundle
+" git clone https://github.com/pangloss/vim-javascript.git
+let javascript_enable_domhtmlcss = 0
+let b:javascript_fold = 1
+let javascript_ignore_javaScriptdoc = 0
+let g:javascript_conceal_function   = "ƒ"
+let g:javascript_conceal_null       = "ø"
+let g:javascript_conceal_this       = "@"
+let g:javascript_conceal_return     = "⇚"
+let g:javascript_conceal_undefined  = "¿"
+let g:javascript_conceal_NaN        = "ℕ"
+let g:javascript_conceal_prototype  = "¶"
+let g:javascript_conceal_static     = "•"
+let g:javascript_conceal_super      = "Ω"
+
+" delimitMate
+so ~/.vim/bundle/delimitMate/test/_setup.vim
+let delimitMate_expand_cr = 1
+filetype indent plugin on
+
+" JS lib syntax
+let g:used_javascript_libs = 'underscore,backbone'
 
 " Better navigating through omnicomplete option list
 " See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
